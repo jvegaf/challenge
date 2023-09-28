@@ -15,8 +15,6 @@ public final class Price {
   private final Currency currency;
   private final Integer priceList;
 
-  private Instant createdAt;
-  private Instant updatedAt;
 
   private Price(Builder builder) {
     id = builder.id;
@@ -84,13 +82,7 @@ public final class Price {
     return priceList;
   }
 
-  public Instant getCreatedAt() {
-    return createdAt;
-  }
 
-  public Instant getUpdatedAt() {
-    return updatedAt;
-  }
 
   public static final class Builder {
     private Long id;
