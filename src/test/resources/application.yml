@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: test
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:pricestestdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MYSQL;DATABASE_TO_LOWER=TRUE;CASE_INSENSITIVE_IDENTIFIERS=TRUE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+    defer-datasource-initialization: false
+
+spring-doc:
+  swagger-ui:
+    path: swagger-ui.html
+
