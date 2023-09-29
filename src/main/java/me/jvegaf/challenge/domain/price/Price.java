@@ -1,9 +1,12 @@
 package me.jvegaf.challenge.domain.price;
 
+import lombok.Getter;
+
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.Currency;
 
+@Getter
 public final class Price {
   private final Long id;
   private final Long brandId;
@@ -31,58 +34,6 @@ public final class Price {
   public static Builder newBuilder() {
     return new Builder();
   }
-
-  public static Builder newBuilder(Price copy) {
-    Builder builder = new Builder();
-    builder.id = copy.getId();
-    builder.brandId = copy.getBrandId();
-    builder.startDate = copy.getStartDate();
-    builder.endDate = copy.getEndDate();
-    builder.productId = copy.getProductId();
-    builder.priority = copy.getPriority();
-    builder.price = copy.getPrice();
-    builder.currency = copy.getCurrency();
-    builder.priceList = copy.getPriceList();
-    return builder;
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  public Long getBrandId() {
-    return brandId;
-  }
-
-  public Instant getStartDate() {
-    return startDate;
-  }
-
-  public Instant getEndDate() {
-    return endDate;
-  }
-
-  public Long getProductId() {
-    return productId;
-  }
-
-  public Long getPriority() {
-    return priority;
-  }
-
-  public BigDecimal getPrice() {
-    return price;
-  }
-
-  public Currency getCurrency() {
-    return currency;
-  }
-
-  public Integer getPriceList() {
-    return priceList;
-  }
-
-
 
   public static final class Builder {
     private Long id;

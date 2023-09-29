@@ -7,6 +7,13 @@ import java.math.BigDecimal;
 import java.time.Instant;
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
-public record PriceResponse(Long id, Long productId, Long brandId, Instant startDate, Instant endDate,
-    BigDecimal price, Integer priceList) {
+public record PriceResponse(
+        Long id,
+        Long productId,
+        Long brandId,
+        Instant startDate,
+        Instant endDate,
+        BigDecimal price,
+        Integer priceList
+) {
 }

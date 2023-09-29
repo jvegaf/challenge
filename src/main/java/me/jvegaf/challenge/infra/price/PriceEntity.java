@@ -1,13 +1,13 @@
 package me.jvegaf.challenge.infra.price;
 
 import jakarta.persistence.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
+import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.Currency;
 
+@Getter
 @Entity
 @Table(name = "PRICES", indexes = {
     @Index(name = "pricesSearchIndex", columnList = "startDate, endDate, productId, brandId") }, uniqueConstraints = {
@@ -34,12 +34,6 @@ public final class PriceEntity {
 
   private Integer priceList;
 
-  @CreationTimestamp
-  private Instant createdAt;
-
-  @UpdateTimestamp
-  private Instant updatedAt;
-
   public PriceEntity() {
   }
 
@@ -53,46 +47,6 @@ public final class PriceEntity {
     price = builder.price;
     currency = builder.currency;
     priceList = builder.priceList;
-  }
-
-  public static Builder newBuilder() {
-    return new Builder();
-  }
-
-  public Long getId() {
-    return id;
-  }
-
-  public Long getBrandId() {
-    return brandId;
-  }
-
-  public Instant getStartDate() {
-    return startDate;
-  }
-
-  public Instant getEndDate() {
-    return endDate;
-  }
-
-  public Long getProductId() {
-    return productId;
-  }
-
-  public Long getPriority() {
-    return priority;
-  }
-
-  public BigDecimal getPrice() {
-    return price;
-  }
-
-  public Currency getCurrency() {
-    return currency;
-  }
-
-  public Integer getPriceList() {
-    return priceList;
   }
 
   public static final class Builder {

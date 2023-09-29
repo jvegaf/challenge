@@ -16,12 +16,14 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import me.jvegaf.challenge.application.price.ApiError;
 import me.jvegaf.challenge.domain.price.ManyPricesFound;
 import me.jvegaf.challenge.domain.price.PriceNotFound;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ControllerAdvice
-public final class ControllerExceptionHandler {
-  Logger logger = LoggerFactory.getLogger(ControllerExceptionHandler.class);
+public class ControllerExceptionHandler {
+  private final Logger logger = LoggerFactory.getLogger(ControllerExceptionHandler.class);
 
   @ExceptionHandler(RuntimeException.class)
+  @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
   protected ResponseEntity<Object> handleRuntimeException(RuntimeException ex) {
     logger.error("ERROR: " + ex);
     return new ResponseEntity<>(
@@ -31,6 +33,7 @@ public final class ControllerExceptionHandler {
   }
 
   @ExceptionHandler(ManyPricesFound.class)
+  @ResponseStatus(HttpStatus.EXPECTATION_FAILED)
   public ResponseEntity<ApiError> handleManyPricesFound(ManyPricesFound ex) {
     logger.error("ERROR: " + ex);
     return new ResponseEntity<>(
@@ -40,6 +43,7 @@ public final class ControllerExceptionHandler {
   }
 
   @ExceptionHandler(PriceNotFound.class)
+  @ResponseStatus(HttpStatus.NOT_FOUND)
   protected ResponseEntity<ApiError> handlePriceNotFound(PriceNotFound ex) {
     logger.error("ERROR: " + ex);
     return new ResponseEntity<>(
@@ -49,6 +53,7 @@ public final class ControllerExceptionHandler {
   }
 
   @ExceptionHandler(MethodArgumentNotValidException.class)
+  @ResponseStatus(HttpStatus.BAD_REQUEST)
   protected ResponseEntity<Object> handleMethodArgumentNotValidException(MethodArgumentNotValidException ex) {
     logger.error("ERROR: " + ex);
     List<String> errors = ex.getBindingResult().getFieldErrors()
