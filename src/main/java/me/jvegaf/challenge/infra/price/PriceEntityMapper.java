@@ -11,7 +11,7 @@ public final class PriceEntityMapper {
 
   public Price toDomain(PriceEntity priceEntity) {
 
-    logger.info("start translate priceEntityId {}", priceEntity.getId());
+    logger.info("start mapping priceEntityId {}", priceEntity.getId());
 
     return Price.newBuilder()
         .withPrice(priceEntity.getPrice())

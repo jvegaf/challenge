@@ -46,7 +46,7 @@ public final class Price {
     private Currency currency;
     private Integer priceList;
 
-    private Builder() {
+    public Builder() {
     }
 
     public Builder withId(Long val) {

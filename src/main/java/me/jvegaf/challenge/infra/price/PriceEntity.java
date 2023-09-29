@@ -60,7 +60,7 @@ public final class PriceEntity {
     private Currency currency;
     private Integer priceList;
 
-    private Builder() {
+    protected Builder() {
     }
 
     public Builder withId(Long val) {
