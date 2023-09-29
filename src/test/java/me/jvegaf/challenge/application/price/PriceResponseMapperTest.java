@@ -1,7 +1,5 @@
 package me.jvegaf.challenge.application.price;
 
-import me.jvegaf.challenge.application.price.PriceResponse;
-import me.jvegaf.challenge.application.price.PriceResponseMapper;
 import me.jvegaf.challenge.domain.price.Price;
 import org.junit.jupiter.api.Test;
 

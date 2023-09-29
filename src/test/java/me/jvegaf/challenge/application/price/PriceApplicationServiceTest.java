@@ -1,10 +1,6 @@
 package me.jvegaf.challenge.application.price;
 
 
-import me.jvegaf.challenge.application.price.PriceApplicationService;
-import me.jvegaf.challenge.application.price.PriceRequest;
-import me.jvegaf.challenge.application.price.PriceResponse;
-import me.jvegaf.challenge.application.price.PriceResponseMapper;
 import me.jvegaf.challenge.domain.price.FindPrice;
 import me.jvegaf.challenge.domain.price.Price;
 import me.jvegaf.challenge.domain.price.PriceNotFound;
@@ -14,7 +10,10 @@ import org.mockito.Mockito;
 import java.math.BigDecimal;
 import java.time.Duration;
 import java.time.Instant;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Currency;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
