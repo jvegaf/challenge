@@ -1,6 +1,5 @@
 package me.jvegaf.challenge.infra.price;
 
-import jakarta.validation.ConstraintViolationException;
 import me.jvegaf.challenge.application.price.PriceRequest;
 import me.jvegaf.challenge.application.price.PriceResponse;
 import me.jvegaf.challenge.domain.price.PriceService;
@@ -9,8 +8,6 @@ import org.mockito.Mockito;
 
 import java.math.BigDecimal;
 import java.time.Instant;
-import java.util.Optional;
-import java.util.logging.Logger;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

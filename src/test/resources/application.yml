@@ -1,15 +1,17 @@
 spring:
   profiles:
     active: test
+  h2:
+    console:
+      enabled: true
   datasource:
-    url: jdbc:h2:mem:test
-    username: test
-    password:
+    url: jdbc:h2:mem:pricestestdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MYSQL;DATABASE_TO_LOWER=TRUE;CASE_INSENSITIVE_IDENTIFIERS=TRUE
     driverClassName: org.h2.Driver
+    username: sa
+    password:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     generate-ddl: true
-    defer-datasource-initialization: true
     hibernate:
       ddl-auto: update
     show-sql: true
@@ -17,12 +19,7 @@ spring:
       hibernate:
         format_sql: true
     open-in-view: false
-  sql:
-    init:
-      data-locations: classpath:data-test.sql
-  h2:
-    console:
-      enabled: true
+    defer-datasource-initialization: false
 
 spring-doc:
   swagger-ui:
