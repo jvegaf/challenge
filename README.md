@@ -5,48 +5,31 @@
     <h1 align="center">Tech Challenge</h1>
 </p>
 <p align="center">
-    <em><code>► INSERT-TEXT-HERE</code></em>
+    <em>E-commerce Price Query Service</em>
 </p>
 
 
 | __Build Status__ | [![build](https://github.com/cicirello/Chips-n-Salsa/workflows/build/badge.svg)](https://github.com/cicirello/Chips-n-Salsa/actions/workflows/build.yml) [![docs](https://github.com/cicirello/Chips-n-Salsa/workflows/docs/badge.svg)](https://chips-n-salsa.cicirello.org/api/) [![CodeQL](https://github.com/cicirello/Chips-n-Salsa/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/cicirello/Chips-n-Salsa/actions/workflows/codeql-analysis.yml) |
 | :--- | :--- |
-| __JaCoCo Test Coverage__ | [![coverage](https://raw.githubusercontent.com/jvegaf/challenge/badges/jacoco.svg)](https://github.com/jvegaf/challenge/actions/workflows/maven.yml) [![branches coverage](https://raw.githubusercontent.com/cicirello/Chips-n-Salsa/badges/branches.svg)](https://github.com/cicirello/Chips-n-Salsa/actions/workflows/build.yml) |
-| __Other Information__ | [![GitHub](https://img.shields.io/github/license/cicirello/Chips-n-Salsa)](https://github.com/cicirello/Chips-n-Salsa/blob/master/LICENSE) [![style](https://img.shields.io/badge/style-Google%20Java%20Style-informational)](https://google.github.io/styleguide/javaguide.html) |
+| __JaCoCo Test Coverage__ | [![coverage](.github/badges/jacoco.svg)](https://github.com/jvegaf/challenge/actions/workflows/maven.yml) |
+| __Other Information__ | [![GitHub](https://img.shields.io/github/license/jvegaf/challenge)](https://github.com/jvegaf/challenge/blob/master/LICENSE) [![style](https://img.shields.io/badge/style-Google%20Java%20Style-informational)](https://google.github.io/styleguide/javaguide.html) |
 
 
-<p align="center">
-	<!-- default option, no dependency badges. -->
-</p>
 
-<br><!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary><br>
-
-- [ Overview](#-overview)
-- [ Features](#-features)
-- [ Repository Structure](#-repository-structure)
-- [ Modules](#-modules)
-- [ Getting Started](#-getting-started)
-  - [ Installation](#-installation)
-  - [ Usage](#-usage)
-  - [ Tests](#-tests)
-- [ Project Roadmap](#-project-roadmap)
-- [ Contributing](#-contributing)
-- [ License](#-license)
-- [ Acknowledgments](#-acknowledgments)
-</details>
-<hr>
-
-##  Overview
-
-<code>► INSERT-TEXT-HERE</code>
-
----
 
 ##  Features
 
-<code>► INSERT-TEXT-HERE</code>
+|    |   Feature         | Description |
+|----|-------------------|---------------------------------------------------------------|
+| ⚙️  | **Architecture**  | The project follows a layered architecture, with a clear separation between the controller (REST) layer, service layer, and data access layer. The single responsibility principle is used to keep each layer focused on a specific task. |
+| 🔩 | **Code Quality**  | The codebase demonstrates good coding practices, adhering to the Google code style guidelines. It follows a modular approach, making the codebase easy to read, understand, and maintain. Proper naming conventions and documentation enhance code readability. |
+| 📄 | **Documentation** | Although not extensive, the provided documentation is sufficient for developers to understand the codebase and its components. |
+| 🧩 | **Modularity**    | The codebase demonstrates good modularity, separating different components into their respective modules. This modular approach allows for easy reusability and maintainability of code. Each module focuses on a specific functionality, making it easier to understand and modify. |
+| 🧪 | **Testing**       | The project includes unit tests using JUnit to verify the functionality of individual classes. It also includes some integration tests. The tests cover important features such as data storage, JSON conversion, and user interactions. |
+| ⚡️  | **Performance**   | The project is designed to be efficient and responsive, with no noticeable performance issues. |
+| 📦 | **Dependencies**  | Key external libraries and dependencies used in the project include Flyway for manage database migrations, and JUnit for unit testing. These dependencies provide necessary functionality and enhance development efficiency. |
+
+
 
 ---
 
@@ -70,157 +53,11 @@
 
 ---
 
-##  Modules
-
-<details closed><summary>.</summary>
-
-| File                                                                 | Summary                         |
-| ---                                                                  | ---                             |
-| [mvnw](https://github.com/jvegaf/challenge/blob/master/mvnw)         | <code>► INSERT-TEXT-HERE</code> |
-| [mvnw.cmd](https://github.com/jvegaf/challenge/blob/master/mvnw.cmd) | <code>► INSERT-TEXT-HERE</code> |
-
-</details>
-
-<details closed><summary>doc</summary>
-
-| File                                                                           | Summary                         |
-| ---                                                                            | ---                             |
-| [prices.http](https://github.com/jvegaf/challenge/blob/master/doc/prices.http) | <code>► INSERT-TEXT-HERE</code> |
-
-</details>
-
-<details closed><summary>src.test.resources</summary>
-
-| File                                                                                                  | Summary                         |
-| ---                                                                                                   | ---                             |
-| [application.yml](https://github.com/jvegaf/challenge/blob/master/src/test/resources/application.yml) | <code>► INSERT-TEXT-HERE</code> |
-| [data-test.sql](https://github.com/jvegaf/challenge/blob/master/src/test/resources/data-test.sql)     | <code>► INSERT-TEXT-HERE</code> |
-
-</details>
-
-<details closed><summary>src.test.resources.migration</summary>
-
-| File                                                                                                                                        | Summary                         |
-| ---                                                                                                                                         | ---                             |
-| [V1__create_prices_table.sql](https://github.com/jvegaf/challenge/blob/master/src/test/resources/migration/V1__create_prices_table.sql)     | <code>► INSERT-TEXT-HERE</code> |
-| [V2__populate_prices_table.sql](https://github.com/jvegaf/challenge/blob/master/src/test/resources/migration/V2__populate_prices_table.sql) | <code>► INSERT-TEXT-HERE</code> |
-
-</details>
-
-<details closed><summary>src.test.java.me.jvegaf.challenge</summary>
-
-| File                                                                                                                                                         | Summary                         |
-| ---                                                                                                                                                          | ---                             |
-| [PriceControllerIntegrationTest.java](https://github.com/jvegaf/challenge/blob/master/src/test/java/me/jvegaf/challenge/PriceControllerIntegrationTest.java) | <code>► INSERT-TEXT-HERE</code> |
-
-</details>
-
-<details closed><summary>src.test.java.me.jvegaf.challenge.application.price</summary>
-
-| File                                                                                                                                                                     | Summary                         |
-| ---                                                                                                                                                                      | ---                             |
-| [PriceApplicationServiceTest.java](https://github.com/jvegaf/challenge/blob/master/src/test/java/me/jvegaf/challenge/application/price/PriceApplicationServiceTest.java) | <code>► INSERT-TEXT-HERE</code> |
-| [PriceResponseMapperTest.java](https://github.com/jvegaf/challenge/blob/master/src/test/java/me/jvegaf/challenge/application/price/PriceResponseMapperTest.java)         | <code>► INSERT-TEXT-HERE</code> |
-
-</details>
-
-<details closed><summary>src.test.java.me.jvegaf.challenge.infra.price</summary>
-
-| File                                                                                                                                                             | Summary                         |
-| ---                                                                                                                                                              | ---                             |
-| [PriceEntityMapperTest.java](https://github.com/jvegaf/challenge/blob/master/src/test/java/me/jvegaf/challenge/infra/price/PriceEntityMapperTest.java)           | <code>► INSERT-TEXT-HERE</code> |
-| [PriceControllerTest.java](https://github.com/jvegaf/challenge/blob/master/src/test/java/me/jvegaf/challenge/infra/price/PriceControllerTest.java)               | <code>► INSERT-TEXT-HERE</code> |
-| [PriceRepositoryAdapterTest.java](https://github.com/jvegaf/challenge/blob/master/src/test/java/me/jvegaf/challenge/infra/price/PriceRepositoryAdapterTest.java) | <code>► INSERT-TEXT-HERE</code> |
-
-</details>
-
-<details closed><summary>src.main.resources</summary>
-
-| File                                                                                                  | Summary                         |
-| ---                                                                                                   | ---                             |
-| [application.yml](https://github.com/jvegaf/challenge/blob/master/src/main/resources/application.yml) | <code>► INSERT-TEXT-HERE</code> |
-
-</details>
-
-<details closed><summary>src.main.resources.db.migration</summary>
-
-| File                                                                                                                                           | Summary                         |
-| ---                                                                                                                                            | ---                             |
-| [V1__create_prices_table.sql](https://github.com/jvegaf/challenge/blob/master/src/main/resources/db/migration/V1__create_prices_table.sql)     | <code>► INSERT-TEXT-HERE</code> |
-| [V2__populate_prices_table.sql](https://github.com/jvegaf/challenge/blob/master/src/main/resources/db/migration/V2__populate_prices_table.sql) | <code>► INSERT-TEXT-HERE</code> |
-
-</details>
-
-<details closed><summary>src.main.java.me.jvegaf.challenge</summary>
-
-| File                                                                                                     | Summary                         |
-| ---                                                                                                      | ---                             |
-| [Main.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/Main.java) | <code>► INSERT-TEXT-HERE</code> |
-
-</details>
-
-<details closed><summary>src.main.java.me.jvegaf.challenge.application.price</summary>
-
-| File                                                                                                                                                             | Summary                         |
-| ---                                                                                                                                                              | ---                             |
-| [FindPriceUseCase.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/application/price/FindPriceUseCase.java)               | <code>► INSERT-TEXT-HERE</code> |
-| [PriceResponse.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/application/price/PriceResponse.java)                     | <code>► INSERT-TEXT-HERE</code> |
-| [PriceResponseMapper.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/application/price/PriceResponseMapper.java)         | <code>► INSERT-TEXT-HERE</code> |
-| [PriceRequest.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/application/price/PriceRequest.java)                       | <code>► INSERT-TEXT-HERE</code> |
-| [ApiError.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/application/price/ApiError.java)                               | <code>► INSERT-TEXT-HERE</code> |
-| [PriceApplicationService.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/application/price/PriceApplicationService.java) | <code>► INSERT-TEXT-HERE</code> |
-
-</details>
-
-<details closed><summary>src.main.java.me.jvegaf.challenge.infra</summary>
-
-| File                                                                                                                                     | Summary                         |
-| ---                                                                                                                                      | ---                             |
-| [ApplicationConfig.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/infra/ApplicationConfig.java) | <code>► INSERT-TEXT-HERE</code> |
-
-</details>
-
-<details closed><summary>src.main.java.me.jvegaf.challenge.infra.price</summary>
-
-| File                                                                                                                                                             | Summary                         |
-| ---                                                                                                                                                              | ---                             |
-| [PriceController.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/infra/price/PriceController.java)                       | <code>► INSERT-TEXT-HERE</code> |
-| [PriceRepositoryAdapter.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/infra/price/PriceRepositoryAdapter.java)         | <code>► INSERT-TEXT-HERE</code> |
-| [JpaPriceRepository.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/infra/price/JpaPriceRepository.java)                 | <code>► INSERT-TEXT-HERE</code> |
-| [ControllerExceptionHandler.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/infra/price/ControllerExceptionHandler.java) | <code>► INSERT-TEXT-HERE</code> |
-| [PriceEntityMapper.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/infra/price/PriceEntityMapper.java)                   | <code>► INSERT-TEXT-HERE</code> |
-| [PriceEntity.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/infra/price/PriceEntity.java)                               | <code>► INSERT-TEXT-HERE</code> |
-
-</details>
-
-<details closed><summary>src.main.java.me.jvegaf.challenge.domain.price</summary>
-
-| File                                                                                                                                        | Summary                         |
-| ---                                                                                                                                         | ---                             |
-| [ManyPricesFound.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/domain/price/ManyPricesFound.java) | <code>► INSERT-TEXT-HERE</code> |
-| [PriceRepository.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/domain/price/PriceRepository.java) | <code>► INSERT-TEXT-HERE</code> |
-| [PriceNotFound.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/domain/price/PriceNotFound.java)     | <code>► INSERT-TEXT-HERE</code> |
-| [PriceService.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/domain/price/PriceService.java)       | <code>► INSERT-TEXT-HERE</code> |
-| [Price.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/domain/price/Price.java)                     | <code>► INSERT-TEXT-HERE</code> |
-| [FindPrice.java](https://github.com/jvegaf/challenge/blob/master/src/main/java/me/jvegaf/challenge/domain/price/FindPrice.java)             | <code>► INSERT-TEXT-HERE</code> |
-
-</details>
-
-<details closed><summary>.github.workflows</summary>
-
-| File                                                                                     | Summary                         |
-| ---                                                                                      | ---                             |
-| [maven.yml](https://github.com/jvegaf/challenge/blob/master/.github/workflows/maven.yml) | <code>► INSERT-TEXT-HERE</code> |
-
-</details>
-
----
-
 ##  Getting Started
 
 **System Requirements:**
 
-* **Java**: `version x.y.z`
+* **Java**: `version 17.0.9`
 
 ###  Installation
 
@@ -248,7 +85,7 @@
 
 > Run challenge using the command below:
 > ```console
-> $ java -jar target/myapp.jar
+> $ java -jar target/challenge-1.0.0.jar
 > ```
 
 ###  Tests
@@ -257,14 +94,6 @@
 > ```console
 > $ mvn test
 > ```
-
----
-
-##  Project Roadmap
-
-- [X] `► INSERT-TASK-1`
-- [ ] `► INSERT-TASK-2`
-- [ ] `► ...`
 
 ---
 
@@ -301,7 +130,7 @@ Contributions are welcome! Here are several ways you can contribute:
 8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
 </details>
 
-<details closed>
+<details>
 <summary>Contributor Graph</summary>
 <br>
 <p align="center">
@@ -315,14 +144,7 @@ Contributions are welcome! Here are several ways you can contribute:
 
 ##  License
 
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+This project released under the [MIT](https://choosealicense.com/licenses/mit) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/mit) file.
 
----
-
-##  Acknowledgments
-
-- List any resources, contributors, inspiration, etc. here.
-
-[**Return**](#-overview)
 
 ---
