@@ -10,10 +10,8 @@ import org.mockito.Mockito;
 import java.math.BigDecimal;
 import java.time.Duration;
 import java.time.Instant;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Currency;
-import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
@@ -46,7 +44,7 @@ public class PriceApplicationServiceTest {
             .withCurrency(Currency.getInstance("USD"))
             .withPriceList(1)
             .build();
-        List<Price> result = Collections.singletonList(price);
+        Optional<Price> result = Optional.of(price);
         PriceResponse expectedResponse = new PriceResponse(
             price.getId(),
             price.getProductId(),
@@ -83,7 +81,7 @@ public class PriceApplicationServiceTest {
         PriceRequest priceRequest = new PriceRequest(Instant.now(), 1L, 1L);
     
         // Act
-        when(findPriceUseCase.findPriceByCriteria(any(Instant.class), anyLong(), anyLong())).thenReturn(Collections.emptyList());
+        when(findPriceUseCase.findPriceByCriteria(any(Instant.class), anyLong(), anyLong())).thenReturn(Optional.empty());
     
         // Assert
         assertThrows(PriceNotFound.class, () -> priceApplicationService.findPriceByCriteria(priceRequest));
@@ -102,8 +100,7 @@ public class PriceApplicationServiceTest {
             1L,
             1L
         );
-        List<Price> result = new ArrayList<>();
-        result.add(Price.newBuilder()
+        Optional<Price> result = Optional.of(Price.newBuilder()
             .withId(1L)
             .withBrandId(1L)
             .withStartDate(Instant.now())
