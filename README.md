@@ -9,7 +9,7 @@
 </p>
 
 
-| __Build Status__ | [![build](https://github.com/cicirello/Chips-n-Salsa/workflows/build/badge.svg)](https://github.com/cicirello/Chips-n-Salsa/actions/workflows/build.yml) [![docs](https://github.com/cicirello/Chips-n-Salsa/workflows/docs/badge.svg)](https://chips-n-salsa.cicirello.org/api/) [![CodeQL](https://github.com/cicirello/Chips-n-Salsa/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/cicirello/Chips-n-Salsa/actions/workflows/codeql-analysis.yml) |
+| __Build Status__ | [![build](https://github.com/cicirello/Chips-n-Salsa/workflows/build/badge.svg)](https://github.com/cicirello/Chips-n-Salsa/actions/workflows/build.yml)  |
 | :--- | :--- |
 | __JaCoCo Test Coverage__ | [![coverage](.github/badges/jacoco.svg)](https://github.com/jvegaf/challenge/actions/workflows/maven.yml) |
 | __Other Information__ | [![GitHub](https://img.shields.io/github/license/jvegaf/challenge)](https://github.com/jvegaf/challenge/blob/master/LICENSE) [![style](https://img.shields.io/badge/style-Google%20Java%20Style-informational)](https://google.github.io/styleguide/javaguide.html) |
