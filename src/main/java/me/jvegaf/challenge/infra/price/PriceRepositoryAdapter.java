@@ -7,7 +7,7 @@ import me.jvegaf.challenge.domain.price.Price;
 import me.jvegaf.challenge.domain.price.PriceRepository;
 
 import java.time.Instant;
-import java.util.List;
+import java.util.Optional;
 
 public class PriceRepositoryAdapter implements PriceRepository {
 
@@ -23,16 +23,16 @@ public class PriceRepositoryAdapter implements PriceRepository {
   }
 
   @Override
-  public List<Price> findPriceByCriteria(Instant date, Long productId, Long brandId) {
+  public Optional<Price> findPriceByCriteria(Instant date, Long productId, Long brandId) {
 
     logger.info("start params date: {}, productId: {}, brandId: {}", date, productId, brandId);
 
-    List<PriceEntity> priceEntityByCriteria = repository.findPriceByCriteria(date, productId, brandId);
+    Optional<PriceEntity> priceEntityByCriteria = repository.findPriceByCriteria(date, productId, brandId);
 
-    List<Price> prices = priceEntityByCriteria.stream().map(mapper::toDomain).toList();
+    Optional<Price> priceOptional = priceEntityByCriteria.map(mapper::toDomain);
 
-    logger.info("return prices size: {}", prices.size());
+    logger.info("price founded: {}", priceOptional.isPresent());
 
-    return prices;
+    return priceOptional;
   }
 }

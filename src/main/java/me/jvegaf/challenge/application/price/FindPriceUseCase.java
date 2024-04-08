@@ -8,7 +8,7 @@ import me.jvegaf.challenge.domain.price.Price;
 import me.jvegaf.challenge.domain.price.PriceRepository;
 
 import java.time.Instant;
-import java.util.List;
+import java.util.Optional;
 
 public class FindPriceUseCase implements FindPrice {
 
@@ -21,14 +21,14 @@ public class FindPriceUseCase implements FindPrice {
   }
 
   @Override
-  public List<Price> findPriceByCriteria(Instant date, Long productId, Long brandId) {
+  public Optional<Price> findPriceByCriteria(Instant date, Long productId, Long brandId) {
 
     logger.info("start params date: {}, productId: {}, brandId: {}", date, productId, brandId);
 
-    List<Price> prices = priceRepository.findPriceByCriteria(date, productId, brandId);
+    Optional<Price> priceOptional = priceRepository.findPriceByCriteria(date, productId, brandId);
 
-    logger.info("return prices count: {}", prices.size());
+    logger.info("price found: {}", priceOptional.isPresent());
 
-    return prices;
+    return priceOptional;
   }
 }
